@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # Configuration settings
-EMBEDDING_DIR = "/home/farwa/ADAFACE_rec/embeddings"
+EMBEDDING_DIR = "../ADAFACE_rec/embeddings"
 ADA_MODEL_PATH = "AdaFace/pretrained/adaface_ir101_webface12m.ckpt"
 
 REDIS_HOST = 'localhost'
