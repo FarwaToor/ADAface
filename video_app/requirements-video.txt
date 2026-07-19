@@ -1,0 +1,9 @@
+# Optional extras for video_processing.py (YOLOv8 + DeepSort face-crop
+# extraction from video). Not required for fr.py or image_app/.
+#
+# dlib has no prebuilt wheel on every platform/Python version and may need
+# CMake + a C++ build toolchain installed to compile from source:
+# https://github.com/davisking/dlib#installation
+ultralytics
+deep-sort-realtime
+dlib

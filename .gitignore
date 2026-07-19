@@ -1,0 +1,30 @@
+# ── Secrets ──────────────────────────────────────────────
+.env
+
+# ── Python ───────────────────────────────────────────────
+venv/
+.venv/
+.testvenv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# ── Vendored / downloaded model assets (fetched by setup_env.py) ─────────
+common/AdaFace/
+
+# ── image_app runtime data (enrolled photos, embeddings, DB) ─────────────
+image_app/uploads/*
+!image_app/uploads/.gitkeep
+image_app/embeddings/
+image_app/person_data.db
+
+# ── video_app runtime data / large downloaded weights ─────────────────────
+video_app/output_faces/
+video_app/output/
+video_app/*.mp4
+video_app/*.pt
+video_app/*.dat
+
+# ── OS ───────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

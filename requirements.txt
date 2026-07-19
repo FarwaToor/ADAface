@@ -1,0 +1,20 @@
+# Core dependencies for setup_env.py, common/ (AdaFace model + face alignment),
+# image_app/, and video_app/fr.py.
+#
+# torch: install the CPU build from https://pytorch.org/get-started/locally/
+# if you don't have a CUDA GPU, e.g.:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch
+numpy
+pillow
+opencv-python-headless
+tqdm
+gdown
+
+# image_app/ (Flask enrollment + search web app)
+flask
+werkzeug
+redis
+python-dotenv
+
+# See video_app/requirements-video.txt for the optional video-pipeline extras.
