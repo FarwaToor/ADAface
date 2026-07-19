@@ -54,6 +54,12 @@ python fr.py path/to/reference_photo.jpg               # matches against output_
 ```
 dlib has no prebuilt wheel on every platform/Python version — it may need CMake and a C++ build toolchain to compile from source. `fr.py` alone (matching against an existing folder of face crops) doesn't need dlib, only `video_processing.py` does.
 
+To render a shareable demo clip with live bounding boxes, track IDs, and a similarity
+score overlaid on every frame:
+```
+python demo_annotate.py path/to/video.mp4 path/to/reference_photo.jpg --output demo.mp4
+```
+
 Project structure
 ```
 ADAface/
@@ -73,6 +79,7 @@ ADAface/
 ├── video_app/                   # video-based recognition
 │   ├── fr.py                     # match a reference photo against a folder of face crops
 │   ├── video_processing.py       # extract face crops from a video (YOLOv8 + DeepSort + dlib)
+│   ├── demo_annotate.py          # render a shareable clip with live bbox/ID/score overlays
 │   ├── download_model.py         # downloads YOLOv8 weights + dlib landmark predictor
 │   └── requirements-video.txt    # extra deps for video_processing.py only
 ├── setup_env.py                 # clones AdaFace + downloads the recognition checkpoint
