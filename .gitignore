@@ -21,6 +21,7 @@ image_app/person_data.db
 # ── video_app runtime data / large downloaded weights ─────────────────────
 video_app/output_faces/
 video_app/output/
+video_app/sample_input/
 video_app/*.mp4
 video_app/*.pt
 video_app/*.dat
