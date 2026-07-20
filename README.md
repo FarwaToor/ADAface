@@ -1,6 +1,17 @@
 ADAface — Face Recognition & Enrollment System
 Face recognition built on AdaFace (IR-101, trained on WebFace12M). Two applications share the same recognition core: enroll and search face photos through a web app, or identify a person across face crops pulled from a video.
 
+## Results
+
+![Live face detection, tracking, and recognition demo](assets/demo.gif)
+
+YOLOv8 detects and DeepSort tracks each face frame-by-frame, while AdaFace scores
+every frontal frame against a reference photo in real time (green = match, red = no
+match). When a face is turned off-angle and can't be reliably aligned, it's labeled
+"tracking..." rather than showing a fabricated score.
+
+[Full-quality demo video](assets/demo.mp4) (generated with `video_app/demo_annotate.py`).
+
 Stack
 - **Recognition:** AdaFace (IR-101 backbone), PyTorch
 - **Detection / alignment:** MTCNN
